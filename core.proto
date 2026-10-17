@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package core;
+option go_package = "./core";
+
+message PingReq {
+  string ping = 1;
+}
+
+message PingResp {
+  string pong = 1;
+  uint64 user_count = 2; // M0 联通性验证：gorm 从 admin_zero 统计的用户数
+}
+
+service Core {
+  rpc Ping(PingReq) returns (PingResp);
+}

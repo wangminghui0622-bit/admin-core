@@ -1,14 +1,44 @@
-module admin-zero/admin-core
+module github.com/wangminghui0622-bit/admin-core
 
 go 1.26.8
 
 require (
-	admin-zero/admin-common v0.0.0
+	github.com/casbin/casbin/v2 v2.135.0
 	github.com/zeromicro/go-zero v1.10.3
 	google.golang.org/grpc v1.84.0
 	google.golang.org/protobuf v1.36.12
-	gorm.io/driver/mysql v1.5.7
+	gorm.io/driver/mysql v1.6.0
 	gorm.io/gorm v1.31.2
+)
+
+require (
+	github.com/bmatcuk/doublestar/v4 v4.9.1 // indirect
+	github.com/casbin/gorm-adapter/v3 v3.39.0 // indirect
+	github.com/casbin/govaluate v1.10.0 // indirect
+	github.com/dustin/go-humanize v1.0.1 // indirect
+	github.com/glebarez/go-sqlite v1.22.0 // indirect
+	github.com/glebarez/sqlite v1.11.0 // indirect
+	github.com/golang-jwt/jwt/v5 v5.3.1
+	github.com/golang-sql/civil v0.0.0-20220223132316-b832511892a9 // indirect
+	github.com/golang-sql/sqlexp v0.1.0 // indirect
+	github.com/golang/freetype v0.0.0-20170609003504-e2365dfdc4a0 // indirect
+	github.com/jackc/pgpassfile v1.0.0 // indirect
+	github.com/jackc/pgservicefile v0.0.0-20240606120523-5a60cdf6a761 // indirect
+	github.com/jackc/pgx/v5 v5.8.0 // indirect
+	github.com/jackc/puddle/v2 v2.2.2 // indirect
+	github.com/microsoft/go-mssqldb v1.9.5 // indirect
+	github.com/mojocn/base64Captcha v1.3.8 // indirect
+	github.com/ncruces/go-strftime v1.0.0 // indirect
+	github.com/remyoudompheng/bigfft v0.0.0-20230129092748-24d4a6f8daec // indirect
+	github.com/shopspring/decimal v1.4.0 // indirect
+	golang.org/x/crypto v0.58.0
+	golang.org/x/image v0.23.0 // indirect
+	gorm.io/driver/postgres v1.6.0 // indirect
+	gorm.io/driver/sqlserver v1.6.3 // indirect
+	modernc.org/libc v1.67.4 // indirect
+	modernc.org/mathutil v1.7.1 // indirect
+	modernc.org/memory v1.11.0 // indirect
+	modernc.org/sqlite v1.42.2 // indirect
 )
 
 require (
@@ -32,7 +62,7 @@ require (
 	github.com/golang/protobuf v1.5.4 // indirect
 	github.com/google/gnostic-models v0.7.0 // indirect
 	github.com/google/go-cmp v0.7.0 // indirect
-	github.com/google/uuid v1.6.0 // indirect
+	github.com/google/uuid v1.6.0
 	github.com/grafana/pyroscope-go v1.3.0 // indirect
 	github.com/grafana/pyroscope-go/godeltaprof v0.1.10 // indirect
 	github.com/grpc-ecosystem/grpc-gateway/v2 v2.27.7 // indirect
@@ -58,6 +88,8 @@ require (
 	github.com/redis/go-redis/v9 v9.21.0 // indirect
 	github.com/spaolacci/murmur3 v1.1.0 // indirect
 	github.com/titanous/json5 v1.0.0 // indirect
+	github.com/wangminghui0622-bit/admin-common v0.0.0
+	github.com/wangminghui0622-bit/admin-message v0.0.0
 	github.com/x448/float16 v0.8.4 // indirect
 	go.etcd.io/etcd/api/v3 v3.5.21 // indirect
 	go.etcd.io/etcd/client/pkg/v3 v3.5.21 // indirect
@@ -80,10 +112,10 @@ require (
 	go.uber.org/zap v1.24.0 // indirect
 	go.yaml.in/yaml/v2 v2.4.2 // indirect
 	go.yaml.in/yaml/v3 v3.0.4 // indirect
-	golang.org/x/exp v0.0.0-20240112132812-db7319d0e0e3 // indirect
+	golang.org/x/exp v0.0.0-20251219203646-944ab1f22d93 // indirect
 	golang.org/x/mod v0.42.0 // indirect
 	golang.org/x/net v0.61.0 // indirect
-	golang.org/x/oauth2 v0.36.0 // indirect
+	golang.org/x/oauth2 v0.36.0
 	golang.org/x/sync v0.24.0 // indirect
 	golang.org/x/sys v0.49.0 // indirect
 	golang.org/x/term v0.47.0 // indirect
@@ -97,7 +129,7 @@ require (
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 	gorm.io/datatypes v1.2.4 // indirect
-	gorm.io/gen v0.3.29 // indirect
+	gorm.io/gen v0.3.29
 	gorm.io/hints v1.1.0 // indirect
 	gorm.io/plugin/dbresolver v1.6.2 // indirect
 	k8s.io/api v0.34.3 // indirect
@@ -112,4 +144,6 @@ require (
 	sigs.k8s.io/yaml v1.6.0 // indirect
 )
 
-replace admin-zero/admin-common => ../admin-common
+replace github.com/wangminghui0622-bit/admin-common => ../admin-common
+
+replace github.com/wangminghui0622-bit/admin-message => ../admin-message

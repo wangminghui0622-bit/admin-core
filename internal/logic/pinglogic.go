@@ -3,8 +3,8 @@ package logic
 import (
 	"context"
 
-	"admin-zero/admin-core/core"
-	"admin-zero/admin-core/internal/svc"
+	"github.com/wangminghui0622-bit/admin-core/core"
+	"github.com/wangminghui0622-bit/admin-core/internal/svc"
 
 	"github.com/zeromicro/go-zero/core/logx"
 )

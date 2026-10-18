@@ -19,7 +19,90 @@ import (
 const _ = grpc.SupportPackageIsVersion7
 
 const (
-	Core_Ping_FullMethodName = "/core.Core/Ping"
+	Core_Ping_FullMethodName                                = "/core.Core/ping"
+	Core_GetCaptcha_FullMethodName                          = "/core.Core/getCaptcha"
+	Core_Login_FullMethodName                               = "/core.Core/login"
+	Core_InitDatabase_FullMethodName                        = "/core.Core/initDatabase"
+	Core_CreateUser_FullMethodName                          = "/core.Core/createUser"
+	Core_UpdateUser_FullMethodName                          = "/core.Core/updateUser"
+	Core_GetUserList_FullMethodName                         = "/core.Core/getUserList"
+	Core_GetUserById_FullMethodName                         = "/core.Core/getUserById"
+	Core_DeleteUser_FullMethodName                          = "/core.Core/deleteUser"
+	Core_GetUserInfo_FullMethodName                         = "/core.Core/getUserInfo"
+	Core_GetUserProfile_FullMethodName                      = "/core.Core/getUserProfile"
+	Core_GetPermCode_FullMethodName                         = "/core.Core/getPermCode"
+	Core_CreateRole_FullMethodName                          = "/core.Core/createRole"
+	Core_UpdateRole_FullMethodName                          = "/core.Core/updateRole"
+	Core_GetRoleList_FullMethodName                         = "/core.Core/getRoleList"
+	Core_GetRoleById_FullMethodName                         = "/core.Core/getRoleById"
+	Core_DeleteRole_FullMethodName                          = "/core.Core/deleteRole"
+	Core_CreateMenu_FullMethodName                          = "/core.Core/createMenu"
+	Core_UpdateMenu_FullMethodName                          = "/core.Core/updateMenu"
+	Core_DeleteMenu_FullMethodName                          = "/core.Core/deleteMenu"
+	Core_GetMenuListByRole_FullMethodName                   = "/core.Core/getMenuListByRole"
+	Core_GetMenuList_FullMethodName                         = "/core.Core/getMenuList"
+	Core_GetMenuAuthority_FullMethodName                    = "/core.Core/getMenuAuthority"
+	Core_CreateOrUpdateMenuAuthority_FullMethodName         = "/core.Core/createOrUpdateMenuAuthority"
+	Core_CreateOrUpdateApiAuthority_FullMethodName          = "/core.Core/createOrUpdateApiAuthority"
+	Core_GetApiAuthority_FullMethodName                     = "/core.Core/getApiAuthority"
+	Core_CreateApi_FullMethodName                           = "/core.Core/createApi"
+	Core_UpdateApi_FullMethodName                           = "/core.Core/updateApi"
+	Core_GetApiList_FullMethodName                          = "/core.Core/getApiList"
+	Core_GetApiById_FullMethodName                          = "/core.Core/getApiById"
+	Core_DeleteApi_FullMethodName                           = "/core.Core/deleteApi"
+	Core_CreateDictionary_FullMethodName                    = "/core.Core/createDictionary"
+	Core_UpdateDictionary_FullMethodName                    = "/core.Core/updateDictionary"
+	Core_GetDictionaryList_FullMethodName                   = "/core.Core/getDictionaryList"
+	Core_GetDictionaryById_FullMethodName                   = "/core.Core/getDictionaryById"
+	Core_DeleteDictionary_FullMethodName                    = "/core.Core/deleteDictionary"
+	Core_CreateDictionaryDetail_FullMethodName              = "/core.Core/createDictionaryDetail"
+	Core_UpdateDictionaryDetail_FullMethodName              = "/core.Core/updateDictionaryDetail"
+	Core_GetDictionaryDetailList_FullMethodName             = "/core.Core/getDictionaryDetailList"
+	Core_GetDictionaryDetailById_FullMethodName             = "/core.Core/getDictionaryDetailById"
+	Core_DeleteDictionaryDetail_FullMethodName              = "/core.Core/deleteDictionaryDetail"
+	Core_GetDictionaryDetailByDictionaryName_FullMethodName = "/core.Core/getDictionaryDetailByDictionaryName"
+	Core_CreateDepartment_FullMethodName                    = "/core.Core/createDepartment"
+	Core_UpdateDepartment_FullMethodName                    = "/core.Core/updateDepartment"
+	Core_GetDepartmentList_FullMethodName                   = "/core.Core/getDepartmentList"
+	Core_GetDepartmentById_FullMethodName                   = "/core.Core/getDepartmentById"
+	Core_DeleteDepartment_FullMethodName                    = "/core.Core/deleteDepartment"
+	Core_CreatePosition_FullMethodName                      = "/core.Core/createPosition"
+	Core_UpdatePosition_FullMethodName                      = "/core.Core/updatePosition"
+	Core_GetPositionList_FullMethodName                     = "/core.Core/getPositionList"
+	Core_GetPositionById_FullMethodName                     = "/core.Core/getPositionById"
+	Core_DeletePosition_FullMethodName                      = "/core.Core/deletePosition"
+	Core_CreateToken_FullMethodName                         = "/core.Core/createToken"
+	Core_DeleteToken_FullMethodName                         = "/core.Core/deleteToken"
+	Core_GetTokenList_FullMethodName                        = "/core.Core/getTokenList"
+	Core_GetTokenById_FullMethodName                        = "/core.Core/getTokenById"
+	Core_BlockUserAllToken_FullMethodName                   = "/core.Core/blockUserAllToken"
+	Core_UpdateToken_FullMethodName                         = "/core.Core/updateToken"
+	Core_CreateConfiguration_FullMethodName                 = "/core.Core/createConfiguration"
+	Core_UpdateConfiguration_FullMethodName                 = "/core.Core/updateConfiguration"
+	Core_GetConfigurationList_FullMethodName                = "/core.Core/getConfigurationList"
+	Core_GetConfigurationById_FullMethodName                = "/core.Core/getConfigurationById"
+	Core_DeleteConfiguration_FullMethodName                 = "/core.Core/deleteConfiguration"
+	Core_GetSystemConfigurationList_FullMethodName          = "/core.Core/getSystemConfigurationList"
+	Core_CreateOauthProvider_FullMethodName                 = "/core.Core/createOauthProvider"
+	Core_UpdateOauthProvider_FullMethodName                 = "/core.Core/updateOauthProvider"
+	Core_GetOauthProviderList_FullMethodName                = "/core.Core/getOauthProviderList"
+	Core_GetOauthProviderById_FullMethodName                = "/core.Core/getOauthProviderById"
+	Core_DeleteOauthProvider_FullMethodName                 = "/core.Core/deleteOauthProvider"
+	Core_OauthLogin_FullMethodName                          = "/core.Core/oauthLogin"
+	Core_OauthCallback_FullMethodName                       = "/core.Core/oauthCallback"
+	Core_EmailCaptcha_FullMethodName                        = "/core.Core/emailCaptcha"
+	Core_SmsCaptcha_FullMethodName                          = "/core.Core/smsCaptcha"
+	Core_LoginByEmail_FullMethodName                        = "/core.Core/loginByEmail"
+	Core_LoginBySms_FullMethodName                          = "/core.Core/loginBySms"
+	Core_Register_FullMethodName                            = "/core.Core/register"
+	Core_RegisterByEmail_FullMethodName                     = "/core.Core/registerByEmail"
+	Core_RegisterBySms_FullMethodName                       = "/core.Core/registerBySms"
+	Core_ResetPasswordByEmail_FullMethodName                = "/core.Core/resetPasswordByEmail"
+	Core_ResetPasswordBySms_FullMethodName                  = "/core.Core/resetPasswordBySms"
+	Core_ChangePassword_FullMethodName                      = "/core.Core/changePassword"
+	Core_RefreshToken_FullMethodName                        = "/core.Core/refreshToken"
+	Core_AccessToken_FullMethodName                         = "/core.Core/accessToken"
+	Core_UpdateProfile_FullMethodName                       = "/core.Core/updateProfile"
 )
 
 // CoreClient is the client API for Core service.
@@ -27,6 +110,107 @@ const (
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type CoreClient interface {
 	Ping(ctx context.Context, in *PingReq, opts ...grpc.CallOption) (*PingResp, error)
+	GetCaptcha(ctx context.Context, in *CaptchaReq, opts ...grpc.CallOption) (*CaptchaResp, error)
+	Login(ctx context.Context, in *LoginReq, opts ...grpc.CallOption) (*LoginResp, error)
+	InitDatabase(ctx context.Context, in *Empty, opts ...grpc.CallOption) (*BaseResp, error)
+	// group: user
+	CreateUser(ctx context.Context, in *UserInfo, opts ...grpc.CallOption) (*BaseUUIDResp, error)
+	UpdateUser(ctx context.Context, in *UserInfo, opts ...grpc.CallOption) (*BaseResp, error)
+	GetUserList(ctx context.Context, in *UserListReq, opts ...grpc.CallOption) (*UserListResp, error)
+	GetUserById(ctx context.Context, in *UUIDReq, opts ...grpc.CallOption) (*UserInfo, error)
+	DeleteUser(ctx context.Context, in *UUIDsReq, opts ...grpc.CallOption) (*BaseResp, error)
+	GetUserInfo(ctx context.Context, in *UUIDReq, opts ...grpc.CallOption) (*UserBaseIDInfo, error)
+	GetUserProfile(ctx context.Context, in *UUIDReq, opts ...grpc.CallOption) (*ProfileInfo, error)
+	GetPermCode(ctx context.Context, in *UUIDReq, opts ...grpc.CallOption) (*PermCodeResp, error)
+	// group: role
+	CreateRole(ctx context.Context, in *RoleInfo, opts ...grpc.CallOption) (*BaseIDResp, error)
+	UpdateRole(ctx context.Context, in *RoleInfo, opts ...grpc.CallOption) (*BaseResp, error)
+	GetRoleList(ctx context.Context, in *RoleListReq, opts ...grpc.CallOption) (*RoleListResp, error)
+	GetRoleById(ctx context.Context, in *IDReq, opts ...grpc.CallOption) (*RoleInfo, error)
+	DeleteRole(ctx context.Context, in *IDsReq, opts ...grpc.CallOption) (*BaseResp, error)
+	// group: menu
+	CreateMenu(ctx context.Context, in *MenuInfo, opts ...grpc.CallOption) (*BaseIDResp, error)
+	UpdateMenu(ctx context.Context, in *MenuInfo, opts ...grpc.CallOption) (*BaseResp, error)
+	DeleteMenu(ctx context.Context, in *IDReq, opts ...grpc.CallOption) (*BaseResp, error)
+	GetMenuListByRole(ctx context.Context, in *UUIDReq, opts ...grpc.CallOption) (*MenuInfoList, error)
+	GetMenuList(ctx context.Context, in *PageInfoReq, opts ...grpc.CallOption) (*MenuInfoList, error)
+	// group: authority
+	GetMenuAuthority(ctx context.Context, in *IDReq, opts ...grpc.CallOption) (*RoleMenuAuthorityResp, error)
+	CreateOrUpdateMenuAuthority(ctx context.Context, in *RoleMenuAuthorityReq, opts ...grpc.CallOption) (*BaseResp, error)
+	CreateOrUpdateApiAuthority(ctx context.Context, in *CreateOrUpdateApiAuthorityReq, opts ...grpc.CallOption) (*BaseResp, error)
+	GetApiAuthority(ctx context.Context, in *IDReq, opts ...grpc.CallOption) (*ApiAuthorityListResp, error)
+	// group: api
+	CreateApi(ctx context.Context, in *ApiInfo, opts ...grpc.CallOption) (*BaseIDResp, error)
+	UpdateApi(ctx context.Context, in *ApiInfo, opts ...grpc.CallOption) (*BaseResp, error)
+	GetApiList(ctx context.Context, in *ApiListReq, opts ...grpc.CallOption) (*ApiListResp, error)
+	GetApiById(ctx context.Context, in *IDReq, opts ...grpc.CallOption) (*ApiInfo, error)
+	DeleteApi(ctx context.Context, in *IDsReq, opts ...grpc.CallOption) (*BaseResp, error)
+	// group: dictionary
+	CreateDictionary(ctx context.Context, in *DictionaryInfo, opts ...grpc.CallOption) (*BaseIDResp, error)
+	UpdateDictionary(ctx context.Context, in *DictionaryInfo, opts ...grpc.CallOption) (*BaseResp, error)
+	GetDictionaryList(ctx context.Context, in *DictionaryListReq, opts ...grpc.CallOption) (*DictionaryListResp, error)
+	GetDictionaryById(ctx context.Context, in *IDReq, opts ...grpc.CallOption) (*DictionaryInfo, error)
+	DeleteDictionary(ctx context.Context, in *IDsReq, opts ...grpc.CallOption) (*BaseResp, error)
+	// group: dictionarydetail
+	CreateDictionaryDetail(ctx context.Context, in *DictionaryDetailInfo, opts ...grpc.CallOption) (*BaseIDResp, error)
+	UpdateDictionaryDetail(ctx context.Context, in *DictionaryDetailInfo, opts ...grpc.CallOption) (*BaseResp, error)
+	GetDictionaryDetailList(ctx context.Context, in *DictionaryDetailListReq, opts ...grpc.CallOption) (*DictionaryDetailListResp, error)
+	GetDictionaryDetailById(ctx context.Context, in *IDReq, opts ...grpc.CallOption) (*DictionaryDetailInfo, error)
+	DeleteDictionaryDetail(ctx context.Context, in *IDsReq, opts ...grpc.CallOption) (*BaseResp, error)
+	GetDictionaryDetailByDictionaryName(ctx context.Context, in *BaseMsg, opts ...grpc.CallOption) (*DictionaryDetailListResp, error)
+	// group: department
+	CreateDepartment(ctx context.Context, in *DepartmentInfo, opts ...grpc.CallOption) (*BaseIDResp, error)
+	UpdateDepartment(ctx context.Context, in *DepartmentInfo, opts ...grpc.CallOption) (*BaseResp, error)
+	GetDepartmentList(ctx context.Context, in *DepartmentListReq, opts ...grpc.CallOption) (*DepartmentListResp, error)
+	GetDepartmentById(ctx context.Context, in *IDReq, opts ...grpc.CallOption) (*DepartmentInfo, error)
+	DeleteDepartment(ctx context.Context, in *IDsReq, opts ...grpc.CallOption) (*BaseResp, error)
+	// group: position
+	CreatePosition(ctx context.Context, in *PositionInfo, opts ...grpc.CallOption) (*BaseIDResp, error)
+	UpdatePosition(ctx context.Context, in *PositionInfo, opts ...grpc.CallOption) (*BaseResp, error)
+	GetPositionList(ctx context.Context, in *PositionListReq, opts ...grpc.CallOption) (*PositionListResp, error)
+	GetPositionById(ctx context.Context, in *IDReq, opts ...grpc.CallOption) (*PositionInfo, error)
+	DeletePosition(ctx context.Context, in *IDsReq, opts ...grpc.CallOption) (*BaseResp, error)
+	// group: token
+	CreateToken(ctx context.Context, in *TokenInfo, opts ...grpc.CallOption) (*BaseUUIDResp, error)
+	DeleteToken(ctx context.Context, in *UUIDsReq, opts ...grpc.CallOption) (*BaseResp, error)
+	GetTokenList(ctx context.Context, in *TokenListReq, opts ...grpc.CallOption) (*TokenListResp, error)
+	GetTokenById(ctx context.Context, in *UUIDReq, opts ...grpc.CallOption) (*TokenInfo, error)
+	BlockUserAllToken(ctx context.Context, in *UUIDReq, opts ...grpc.CallOption) (*BaseResp, error)
+	UpdateToken(ctx context.Context, in *TokenInfo, opts ...grpc.CallOption) (*BaseResp, error)
+	// group: configuration
+	CreateConfiguration(ctx context.Context, in *ConfigurationInfo, opts ...grpc.CallOption) (*BaseIDResp, error)
+	UpdateConfiguration(ctx context.Context, in *ConfigurationInfo, opts ...grpc.CallOption) (*BaseResp, error)
+	GetConfigurationList(ctx context.Context, in *ConfigurationListReq, opts ...grpc.CallOption) (*ConfigurationListResp, error)
+	GetConfigurationById(ctx context.Context, in *IDReq, opts ...grpc.CallOption) (*ConfigurationInfo, error)
+	DeleteConfiguration(ctx context.Context, in *IDsReq, opts ...grpc.CallOption) (*BaseResp, error)
+	GetSystemConfigurationList(ctx context.Context, in *Empty, opts ...grpc.CallOption) (*ConfigurationListResp, error)
+	// group: oauthprovider
+	CreateOauthProvider(ctx context.Context, in *OauthProviderInfo, opts ...grpc.CallOption) (*BaseIDResp, error)
+	UpdateOauthProvider(ctx context.Context, in *OauthProviderInfo, opts ...grpc.CallOption) (*BaseResp, error)
+	GetOauthProviderList(ctx context.Context, in *OauthProviderListReq, opts ...grpc.CallOption) (*OauthProviderListResp, error)
+	GetOauthProviderById(ctx context.Context, in *IDReq, opts ...grpc.CallOption) (*OauthProviderInfo, error)
+	DeleteOauthProvider(ctx context.Context, in *IDsReq, opts ...grpc.CallOption) (*BaseResp, error)
+	OauthLogin(ctx context.Context, in *OauthLoginReq, opts ...grpc.CallOption) (*OauthRedirectResp, error)
+	OauthCallback(ctx context.Context, in *CallbackReq, opts ...grpc.CallOption) (*CallbackResp, error)
+	// group: captcha
+	EmailCaptcha(ctx context.Context, in *EmailCaptchaReq, opts ...grpc.CallOption) (*BaseResp, error)
+	SmsCaptcha(ctx context.Context, in *SmsCaptchaReq, opts ...grpc.CallOption) (*BaseResp, error)
+	// group: login
+	LoginByEmail(ctx context.Context, in *LoginByEmailReq, opts ...grpc.CallOption) (*LoginResp, error)
+	LoginBySms(ctx context.Context, in *LoginBySmsReq, opts ...grpc.CallOption) (*LoginResp, error)
+	// group: register
+	Register(ctx context.Context, in *RegisterReq, opts ...grpc.CallOption) (*BaseResp, error)
+	RegisterByEmail(ctx context.Context, in *RegisterByEmailReq, opts ...grpc.CallOption) (*BaseResp, error)
+	RegisterBySms(ctx context.Context, in *RegisterBySmsReq, opts ...grpc.CallOption) (*BaseResp, error)
+	// group: password
+	ResetPasswordByEmail(ctx context.Context, in *ResetPasswordByEmailReq, opts ...grpc.CallOption) (*BaseResp, error)
+	ResetPasswordBySms(ctx context.Context, in *ResetPasswordBySmsReq, opts ...grpc.CallOption) (*BaseResp, error)
+	ChangePassword(ctx context.Context, in *ChangePasswordReq, opts ...grpc.CallOption) (*BaseResp, error)
+	// group: token
+	RefreshToken(ctx context.Context, in *RefreshTokenReq, opts ...grpc.CallOption) (*RefreshTokenResp, error)
+	AccessToken(ctx context.Context, in *AccessTokenReq, opts ...grpc.CallOption) (*RefreshTokenResp, error)
+	// group: user
+	UpdateProfile(ctx context.Context, in *ProfileInfo, opts ...grpc.CallOption) (*BaseResp, error)
 }
 
 type coreClient struct {
@@ -46,11 +230,859 @@ func (c *coreClient) Ping(ctx context.Context, in *PingReq, opts ...grpc.CallOpt
 	return out, nil
 }
 
+func (c *coreClient) GetCaptcha(ctx context.Context, in *CaptchaReq, opts ...grpc.CallOption) (*CaptchaResp, error) {
+	out := new(CaptchaResp)
+	err := c.cc.Invoke(ctx, Core_GetCaptcha_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) Login(ctx context.Context, in *LoginReq, opts ...grpc.CallOption) (*LoginResp, error) {
+	out := new(LoginResp)
+	err := c.cc.Invoke(ctx, Core_Login_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) InitDatabase(ctx context.Context, in *Empty, opts ...grpc.CallOption) (*BaseResp, error) {
+	out := new(BaseResp)
+	err := c.cc.Invoke(ctx, Core_InitDatabase_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) CreateUser(ctx context.Context, in *UserInfo, opts ...grpc.CallOption) (*BaseUUIDResp, error) {
+	out := new(BaseUUIDResp)
+	err := c.cc.Invoke(ctx, Core_CreateUser_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) UpdateUser(ctx context.Context, in *UserInfo, opts ...grpc.CallOption) (*BaseResp, error) {
+	out := new(BaseResp)
+	err := c.cc.Invoke(ctx, Core_UpdateUser_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) GetUserList(ctx context.Context, in *UserListReq, opts ...grpc.CallOption) (*UserListResp, error) {
+	out := new(UserListResp)
+	err := c.cc.Invoke(ctx, Core_GetUserList_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) GetUserById(ctx context.Context, in *UUIDReq, opts ...grpc.CallOption) (*UserInfo, error) {
+	out := new(UserInfo)
+	err := c.cc.Invoke(ctx, Core_GetUserById_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) DeleteUser(ctx context.Context, in *UUIDsReq, opts ...grpc.CallOption) (*BaseResp, error) {
+	out := new(BaseResp)
+	err := c.cc.Invoke(ctx, Core_DeleteUser_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) GetUserInfo(ctx context.Context, in *UUIDReq, opts ...grpc.CallOption) (*UserBaseIDInfo, error) {
+	out := new(UserBaseIDInfo)
+	err := c.cc.Invoke(ctx, Core_GetUserInfo_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) GetUserProfile(ctx context.Context, in *UUIDReq, opts ...grpc.CallOption) (*ProfileInfo, error) {
+	out := new(ProfileInfo)
+	err := c.cc.Invoke(ctx, Core_GetUserProfile_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) GetPermCode(ctx context.Context, in *UUIDReq, opts ...grpc.CallOption) (*PermCodeResp, error) {
+	out := new(PermCodeResp)
+	err := c.cc.Invoke(ctx, Core_GetPermCode_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) CreateRole(ctx context.Context, in *RoleInfo, opts ...grpc.CallOption) (*BaseIDResp, error) {
+	out := new(BaseIDResp)
+	err := c.cc.Invoke(ctx, Core_CreateRole_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) UpdateRole(ctx context.Context, in *RoleInfo, opts ...grpc.CallOption) (*BaseResp, error) {
+	out := new(BaseResp)
+	err := c.cc.Invoke(ctx, Core_UpdateRole_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) GetRoleList(ctx context.Context, in *RoleListReq, opts ...grpc.CallOption) (*RoleListResp, error) {
+	out := new(RoleListResp)
+	err := c.cc.Invoke(ctx, Core_GetRoleList_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) GetRoleById(ctx context.Context, in *IDReq, opts ...grpc.CallOption) (*RoleInfo, error) {
+	out := new(RoleInfo)
+	err := c.cc.Invoke(ctx, Core_GetRoleById_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) DeleteRole(ctx context.Context, in *IDsReq, opts ...grpc.CallOption) (*BaseResp, error) {
+	out := new(BaseResp)
+	err := c.cc.Invoke(ctx, Core_DeleteRole_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) CreateMenu(ctx context.Context, in *MenuInfo, opts ...grpc.CallOption) (*BaseIDResp, error) {
+	out := new(BaseIDResp)
+	err := c.cc.Invoke(ctx, Core_CreateMenu_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) UpdateMenu(ctx context.Context, in *MenuInfo, opts ...grpc.CallOption) (*BaseResp, error) {
+	out := new(BaseResp)
+	err := c.cc.Invoke(ctx, Core_UpdateMenu_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) DeleteMenu(ctx context.Context, in *IDReq, opts ...grpc.CallOption) (*BaseResp, error) {
+	out := new(BaseResp)
+	err := c.cc.Invoke(ctx, Core_DeleteMenu_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) GetMenuListByRole(ctx context.Context, in *UUIDReq, opts ...grpc.CallOption) (*MenuInfoList, error) {
+	out := new(MenuInfoList)
+	err := c.cc.Invoke(ctx, Core_GetMenuListByRole_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) GetMenuList(ctx context.Context, in *PageInfoReq, opts ...grpc.CallOption) (*MenuInfoList, error) {
+	out := new(MenuInfoList)
+	err := c.cc.Invoke(ctx, Core_GetMenuList_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) GetMenuAuthority(ctx context.Context, in *IDReq, opts ...grpc.CallOption) (*RoleMenuAuthorityResp, error) {
+	out := new(RoleMenuAuthorityResp)
+	err := c.cc.Invoke(ctx, Core_GetMenuAuthority_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) CreateOrUpdateMenuAuthority(ctx context.Context, in *RoleMenuAuthorityReq, opts ...grpc.CallOption) (*BaseResp, error) {
+	out := new(BaseResp)
+	err := c.cc.Invoke(ctx, Core_CreateOrUpdateMenuAuthority_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) CreateOrUpdateApiAuthority(ctx context.Context, in *CreateOrUpdateApiAuthorityReq, opts ...grpc.CallOption) (*BaseResp, error) {
+	out := new(BaseResp)
+	err := c.cc.Invoke(ctx, Core_CreateOrUpdateApiAuthority_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) GetApiAuthority(ctx context.Context, in *IDReq, opts ...grpc.CallOption) (*ApiAuthorityListResp, error) {
+	out := new(ApiAuthorityListResp)
+	err := c.cc.Invoke(ctx, Core_GetApiAuthority_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) CreateApi(ctx context.Context, in *ApiInfo, opts ...grpc.CallOption) (*BaseIDResp, error) {
+	out := new(BaseIDResp)
+	err := c.cc.Invoke(ctx, Core_CreateApi_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) UpdateApi(ctx context.Context, in *ApiInfo, opts ...grpc.CallOption) (*BaseResp, error) {
+	out := new(BaseResp)
+	err := c.cc.Invoke(ctx, Core_UpdateApi_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) GetApiList(ctx context.Context, in *ApiListReq, opts ...grpc.CallOption) (*ApiListResp, error) {
+	out := new(ApiListResp)
+	err := c.cc.Invoke(ctx, Core_GetApiList_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) GetApiById(ctx context.Context, in *IDReq, opts ...grpc.CallOption) (*ApiInfo, error) {
+	out := new(ApiInfo)
+	err := c.cc.Invoke(ctx, Core_GetApiById_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) DeleteApi(ctx context.Context, in *IDsReq, opts ...grpc.CallOption) (*BaseResp, error) {
+	out := new(BaseResp)
+	err := c.cc.Invoke(ctx, Core_DeleteApi_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) CreateDictionary(ctx context.Context, in *DictionaryInfo, opts ...grpc.CallOption) (*BaseIDResp, error) {
+	out := new(BaseIDResp)
+	err := c.cc.Invoke(ctx, Core_CreateDictionary_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) UpdateDictionary(ctx context.Context, in *DictionaryInfo, opts ...grpc.CallOption) (*BaseResp, error) {
+	out := new(BaseResp)
+	err := c.cc.Invoke(ctx, Core_UpdateDictionary_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) GetDictionaryList(ctx context.Context, in *DictionaryListReq, opts ...grpc.CallOption) (*DictionaryListResp, error) {
+	out := new(DictionaryListResp)
+	err := c.cc.Invoke(ctx, Core_GetDictionaryList_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) GetDictionaryById(ctx context.Context, in *IDReq, opts ...grpc.CallOption) (*DictionaryInfo, error) {
+	out := new(DictionaryInfo)
+	err := c.cc.Invoke(ctx, Core_GetDictionaryById_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) DeleteDictionary(ctx context.Context, in *IDsReq, opts ...grpc.CallOption) (*BaseResp, error) {
+	out := new(BaseResp)
+	err := c.cc.Invoke(ctx, Core_DeleteDictionary_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) CreateDictionaryDetail(ctx context.Context, in *DictionaryDetailInfo, opts ...grpc.CallOption) (*BaseIDResp, error) {
+	out := new(BaseIDResp)
+	err := c.cc.Invoke(ctx, Core_CreateDictionaryDetail_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) UpdateDictionaryDetail(ctx context.Context, in *DictionaryDetailInfo, opts ...grpc.CallOption) (*BaseResp, error) {
+	out := new(BaseResp)
+	err := c.cc.Invoke(ctx, Core_UpdateDictionaryDetail_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) GetDictionaryDetailList(ctx context.Context, in *DictionaryDetailListReq, opts ...grpc.CallOption) (*DictionaryDetailListResp, error) {
+	out := new(DictionaryDetailListResp)
+	err := c.cc.Invoke(ctx, Core_GetDictionaryDetailList_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) GetDictionaryDetailById(ctx context.Context, in *IDReq, opts ...grpc.CallOption) (*DictionaryDetailInfo, error) {
+	out := new(DictionaryDetailInfo)
+	err := c.cc.Invoke(ctx, Core_GetDictionaryDetailById_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) DeleteDictionaryDetail(ctx context.Context, in *IDsReq, opts ...grpc.CallOption) (*BaseResp, error) {
+	out := new(BaseResp)
+	err := c.cc.Invoke(ctx, Core_DeleteDictionaryDetail_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) GetDictionaryDetailByDictionaryName(ctx context.Context, in *BaseMsg, opts ...grpc.CallOption) (*DictionaryDetailListResp, error) {
+	out := new(DictionaryDetailListResp)
+	err := c.cc.Invoke(ctx, Core_GetDictionaryDetailByDictionaryName_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) CreateDepartment(ctx context.Context, in *DepartmentInfo, opts ...grpc.CallOption) (*BaseIDResp, error) {
+	out := new(BaseIDResp)
+	err := c.cc.Invoke(ctx, Core_CreateDepartment_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) UpdateDepartment(ctx context.Context, in *DepartmentInfo, opts ...grpc.CallOption) (*BaseResp, error) {
+	out := new(BaseResp)
+	err := c.cc.Invoke(ctx, Core_UpdateDepartment_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) GetDepartmentList(ctx context.Context, in *DepartmentListReq, opts ...grpc.CallOption) (*DepartmentListResp, error) {
+	out := new(DepartmentListResp)
+	err := c.cc.Invoke(ctx, Core_GetDepartmentList_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) GetDepartmentById(ctx context.Context, in *IDReq, opts ...grpc.CallOption) (*DepartmentInfo, error) {
+	out := new(DepartmentInfo)
+	err := c.cc.Invoke(ctx, Core_GetDepartmentById_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) DeleteDepartment(ctx context.Context, in *IDsReq, opts ...grpc.CallOption) (*BaseResp, error) {
+	out := new(BaseResp)
+	err := c.cc.Invoke(ctx, Core_DeleteDepartment_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) CreatePosition(ctx context.Context, in *PositionInfo, opts ...grpc.CallOption) (*BaseIDResp, error) {
+	out := new(BaseIDResp)
+	err := c.cc.Invoke(ctx, Core_CreatePosition_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) UpdatePosition(ctx context.Context, in *PositionInfo, opts ...grpc.CallOption) (*BaseResp, error) {
+	out := new(BaseResp)
+	err := c.cc.Invoke(ctx, Core_UpdatePosition_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) GetPositionList(ctx context.Context, in *PositionListReq, opts ...grpc.CallOption) (*PositionListResp, error) {
+	out := new(PositionListResp)
+	err := c.cc.Invoke(ctx, Core_GetPositionList_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) GetPositionById(ctx context.Context, in *IDReq, opts ...grpc.CallOption) (*PositionInfo, error) {
+	out := new(PositionInfo)
+	err := c.cc.Invoke(ctx, Core_GetPositionById_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) DeletePosition(ctx context.Context, in *IDsReq, opts ...grpc.CallOption) (*BaseResp, error) {
+	out := new(BaseResp)
+	err := c.cc.Invoke(ctx, Core_DeletePosition_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) CreateToken(ctx context.Context, in *TokenInfo, opts ...grpc.CallOption) (*BaseUUIDResp, error) {
+	out := new(BaseUUIDResp)
+	err := c.cc.Invoke(ctx, Core_CreateToken_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) DeleteToken(ctx context.Context, in *UUIDsReq, opts ...grpc.CallOption) (*BaseResp, error) {
+	out := new(BaseResp)
+	err := c.cc.Invoke(ctx, Core_DeleteToken_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) GetTokenList(ctx context.Context, in *TokenListReq, opts ...grpc.CallOption) (*TokenListResp, error) {
+	out := new(TokenListResp)
+	err := c.cc.Invoke(ctx, Core_GetTokenList_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) GetTokenById(ctx context.Context, in *UUIDReq, opts ...grpc.CallOption) (*TokenInfo, error) {
+	out := new(TokenInfo)
+	err := c.cc.Invoke(ctx, Core_GetTokenById_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) BlockUserAllToken(ctx context.Context, in *UUIDReq, opts ...grpc.CallOption) (*BaseResp, error) {
+	out := new(BaseResp)
+	err := c.cc.Invoke(ctx, Core_BlockUserAllToken_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) UpdateToken(ctx context.Context, in *TokenInfo, opts ...grpc.CallOption) (*BaseResp, error) {
+	out := new(BaseResp)
+	err := c.cc.Invoke(ctx, Core_UpdateToken_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) CreateConfiguration(ctx context.Context, in *ConfigurationInfo, opts ...grpc.CallOption) (*BaseIDResp, error) {
+	out := new(BaseIDResp)
+	err := c.cc.Invoke(ctx, Core_CreateConfiguration_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) UpdateConfiguration(ctx context.Context, in *ConfigurationInfo, opts ...grpc.CallOption) (*BaseResp, error) {
+	out := new(BaseResp)
+	err := c.cc.Invoke(ctx, Core_UpdateConfiguration_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) GetConfigurationList(ctx context.Context, in *ConfigurationListReq, opts ...grpc.CallOption) (*ConfigurationListResp, error) {
+	out := new(ConfigurationListResp)
+	err := c.cc.Invoke(ctx, Core_GetConfigurationList_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) GetConfigurationById(ctx context.Context, in *IDReq, opts ...grpc.CallOption) (*ConfigurationInfo, error) {
+	out := new(ConfigurationInfo)
+	err := c.cc.Invoke(ctx, Core_GetConfigurationById_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) DeleteConfiguration(ctx context.Context, in *IDsReq, opts ...grpc.CallOption) (*BaseResp, error) {
+	out := new(BaseResp)
+	err := c.cc.Invoke(ctx, Core_DeleteConfiguration_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) GetSystemConfigurationList(ctx context.Context, in *Empty, opts ...grpc.CallOption) (*ConfigurationListResp, error) {
+	out := new(ConfigurationListResp)
+	err := c.cc.Invoke(ctx, Core_GetSystemConfigurationList_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) CreateOauthProvider(ctx context.Context, in *OauthProviderInfo, opts ...grpc.CallOption) (*BaseIDResp, error) {
+	out := new(BaseIDResp)
+	err := c.cc.Invoke(ctx, Core_CreateOauthProvider_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) UpdateOauthProvider(ctx context.Context, in *OauthProviderInfo, opts ...grpc.CallOption) (*BaseResp, error) {
+	out := new(BaseResp)
+	err := c.cc.Invoke(ctx, Core_UpdateOauthProvider_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) GetOauthProviderList(ctx context.Context, in *OauthProviderListReq, opts ...grpc.CallOption) (*OauthProviderListResp, error) {
+	out := new(OauthProviderListResp)
+	err := c.cc.Invoke(ctx, Core_GetOauthProviderList_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) GetOauthProviderById(ctx context.Context, in *IDReq, opts ...grpc.CallOption) (*OauthProviderInfo, error) {
+	out := new(OauthProviderInfo)
+	err := c.cc.Invoke(ctx, Core_GetOauthProviderById_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) DeleteOauthProvider(ctx context.Context, in *IDsReq, opts ...grpc.CallOption) (*BaseResp, error) {
+	out := new(BaseResp)
+	err := c.cc.Invoke(ctx, Core_DeleteOauthProvider_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) OauthLogin(ctx context.Context, in *OauthLoginReq, opts ...grpc.CallOption) (*OauthRedirectResp, error) {
+	out := new(OauthRedirectResp)
+	err := c.cc.Invoke(ctx, Core_OauthLogin_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) OauthCallback(ctx context.Context, in *CallbackReq, opts ...grpc.CallOption) (*CallbackResp, error) {
+	out := new(CallbackResp)
+	err := c.cc.Invoke(ctx, Core_OauthCallback_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) EmailCaptcha(ctx context.Context, in *EmailCaptchaReq, opts ...grpc.CallOption) (*BaseResp, error) {
+	out := new(BaseResp)
+	err := c.cc.Invoke(ctx, Core_EmailCaptcha_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) SmsCaptcha(ctx context.Context, in *SmsCaptchaReq, opts ...grpc.CallOption) (*BaseResp, error) {
+	out := new(BaseResp)
+	err := c.cc.Invoke(ctx, Core_SmsCaptcha_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) LoginByEmail(ctx context.Context, in *LoginByEmailReq, opts ...grpc.CallOption) (*LoginResp, error) {
+	out := new(LoginResp)
+	err := c.cc.Invoke(ctx, Core_LoginByEmail_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) LoginBySms(ctx context.Context, in *LoginBySmsReq, opts ...grpc.CallOption) (*LoginResp, error) {
+	out := new(LoginResp)
+	err := c.cc.Invoke(ctx, Core_LoginBySms_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) Register(ctx context.Context, in *RegisterReq, opts ...grpc.CallOption) (*BaseResp, error) {
+	out := new(BaseResp)
+	err := c.cc.Invoke(ctx, Core_Register_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) RegisterByEmail(ctx context.Context, in *RegisterByEmailReq, opts ...grpc.CallOption) (*BaseResp, error) {
+	out := new(BaseResp)
+	err := c.cc.Invoke(ctx, Core_RegisterByEmail_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) RegisterBySms(ctx context.Context, in *RegisterBySmsReq, opts ...grpc.CallOption) (*BaseResp, error) {
+	out := new(BaseResp)
+	err := c.cc.Invoke(ctx, Core_RegisterBySms_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) ResetPasswordByEmail(ctx context.Context, in *ResetPasswordByEmailReq, opts ...grpc.CallOption) (*BaseResp, error) {
+	out := new(BaseResp)
+	err := c.cc.Invoke(ctx, Core_ResetPasswordByEmail_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) ResetPasswordBySms(ctx context.Context, in *ResetPasswordBySmsReq, opts ...grpc.CallOption) (*BaseResp, error) {
+	out := new(BaseResp)
+	err := c.cc.Invoke(ctx, Core_ResetPasswordBySms_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) ChangePassword(ctx context.Context, in *ChangePasswordReq, opts ...grpc.CallOption) (*BaseResp, error) {
+	out := new(BaseResp)
+	err := c.cc.Invoke(ctx, Core_ChangePassword_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) RefreshToken(ctx context.Context, in *RefreshTokenReq, opts ...grpc.CallOption) (*RefreshTokenResp, error) {
+	out := new(RefreshTokenResp)
+	err := c.cc.Invoke(ctx, Core_RefreshToken_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) AccessToken(ctx context.Context, in *AccessTokenReq, opts ...grpc.CallOption) (*RefreshTokenResp, error) {
+	out := new(RefreshTokenResp)
+	err := c.cc.Invoke(ctx, Core_AccessToken_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreClient) UpdateProfile(ctx context.Context, in *ProfileInfo, opts ...grpc.CallOption) (*BaseResp, error) {
+	out := new(BaseResp)
+	err := c.cc.Invoke(ctx, Core_UpdateProfile_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // CoreServer is the server API for Core service.
 // All implementations must embed UnimplementedCoreServer
 // for forward compatibility
 type CoreServer interface {
 	Ping(context.Context, *PingReq) (*PingResp, error)
+	GetCaptcha(context.Context, *CaptchaReq) (*CaptchaResp, error)
+	Login(context.Context, *LoginReq) (*LoginResp, error)
+	InitDatabase(context.Context, *Empty) (*BaseResp, error)
+	// group: user
+	CreateUser(context.Context, *UserInfo) (*BaseUUIDResp, error)
+	UpdateUser(context.Context, *UserInfo) (*BaseResp, error)
+	GetUserList(context.Context, *UserListReq) (*UserListResp, error)
+	GetUserById(context.Context, *UUIDReq) (*UserInfo, error)
+	DeleteUser(context.Context, *UUIDsReq) (*BaseResp, error)
+	GetUserInfo(context.Context, *UUIDReq) (*UserBaseIDInfo, error)
+	GetUserProfile(context.Context, *UUIDReq) (*ProfileInfo, error)
+	GetPermCode(context.Context, *UUIDReq) (*PermCodeResp, error)
+	// group: role
+	CreateRole(context.Context, *RoleInfo) (*BaseIDResp, error)
+	UpdateRole(context.Context, *RoleInfo) (*BaseResp, error)
+	GetRoleList(context.Context, *RoleListReq) (*RoleListResp, error)
+	GetRoleById(context.Context, *IDReq) (*RoleInfo, error)
+	DeleteRole(context.Context, *IDsReq) (*BaseResp, error)
+	// group: menu
+	CreateMenu(context.Context, *MenuInfo) (*BaseIDResp, error)
+	UpdateMenu(context.Context, *MenuInfo) (*BaseResp, error)
+	DeleteMenu(context.Context, *IDReq) (*BaseResp, error)
+	GetMenuListByRole(context.Context, *UUIDReq) (*MenuInfoList, error)
+	GetMenuList(context.Context, *PageInfoReq) (*MenuInfoList, error)
+	// group: authority
+	GetMenuAuthority(context.Context, *IDReq) (*RoleMenuAuthorityResp, error)
+	CreateOrUpdateMenuAuthority(context.Context, *RoleMenuAuthorityReq) (*BaseResp, error)
+	CreateOrUpdateApiAuthority(context.Context, *CreateOrUpdateApiAuthorityReq) (*BaseResp, error)
+	GetApiAuthority(context.Context, *IDReq) (*ApiAuthorityListResp, error)
+	// group: api
+	CreateApi(context.Context, *ApiInfo) (*BaseIDResp, error)
+	UpdateApi(context.Context, *ApiInfo) (*BaseResp, error)
+	GetApiList(context.Context, *ApiListReq) (*ApiListResp, error)
+	GetApiById(context.Context, *IDReq) (*ApiInfo, error)
+	DeleteApi(context.Context, *IDsReq) (*BaseResp, error)
+	// group: dictionary
+	CreateDictionary(context.Context, *DictionaryInfo) (*BaseIDResp, error)
+	UpdateDictionary(context.Context, *DictionaryInfo) (*BaseResp, error)
+	GetDictionaryList(context.Context, *DictionaryListReq) (*DictionaryListResp, error)
+	GetDictionaryById(context.Context, *IDReq) (*DictionaryInfo, error)
+	DeleteDictionary(context.Context, *IDsReq) (*BaseResp, error)
+	// group: dictionarydetail
+	CreateDictionaryDetail(context.Context, *DictionaryDetailInfo) (*BaseIDResp, error)
+	UpdateDictionaryDetail(context.Context, *DictionaryDetailInfo) (*BaseResp, error)
+	GetDictionaryDetailList(context.Context, *DictionaryDetailListReq) (*DictionaryDetailListResp, error)
+	GetDictionaryDetailById(context.Context, *IDReq) (*DictionaryDetailInfo, error)
+	DeleteDictionaryDetail(context.Context, *IDsReq) (*BaseResp, error)
+	GetDictionaryDetailByDictionaryName(context.Context, *BaseMsg) (*DictionaryDetailListResp, error)
+	// group: department
+	CreateDepartment(context.Context, *DepartmentInfo) (*BaseIDResp, error)
+	UpdateDepartment(context.Context, *DepartmentInfo) (*BaseResp, error)
+	GetDepartmentList(context.Context, *DepartmentListReq) (*DepartmentListResp, error)
+	GetDepartmentById(context.Context, *IDReq) (*DepartmentInfo, error)
+	DeleteDepartment(context.Context, *IDsReq) (*BaseResp, error)
+	// group: position
+	CreatePosition(context.Context, *PositionInfo) (*BaseIDResp, error)
+	UpdatePosition(context.Context, *PositionInfo) (*BaseResp, error)
+	GetPositionList(context.Context, *PositionListReq) (*PositionListResp, error)
+	GetPositionById(context.Context, *IDReq) (*PositionInfo, error)
+	DeletePosition(context.Context, *IDsReq) (*BaseResp, error)
+	// group: token
+	CreateToken(context.Context, *TokenInfo) (*BaseUUIDResp, error)
+	DeleteToken(context.Context, *UUIDsReq) (*BaseResp, error)
+	GetTokenList(context.Context, *TokenListReq) (*TokenListResp, error)
+	GetTokenById(context.Context, *UUIDReq) (*TokenInfo, error)
+	BlockUserAllToken(context.Context, *UUIDReq) (*BaseResp, error)
+	UpdateToken(context.Context, *TokenInfo) (*BaseResp, error)
+	// group: configuration
+	CreateConfiguration(context.Context, *ConfigurationInfo) (*BaseIDResp, error)
+	UpdateConfiguration(context.Context, *ConfigurationInfo) (*BaseResp, error)
+	GetConfigurationList(context.Context, *ConfigurationListReq) (*ConfigurationListResp, error)
+	GetConfigurationById(context.Context, *IDReq) (*ConfigurationInfo, error)
+	DeleteConfiguration(context.Context, *IDsReq) (*BaseResp, error)
+	GetSystemConfigurationList(context.Context, *Empty) (*ConfigurationListResp, error)
+	// group: oauthprovider
+	CreateOauthProvider(context.Context, *OauthProviderInfo) (*BaseIDResp, error)
+	UpdateOauthProvider(context.Context, *OauthProviderInfo) (*BaseResp, error)
+	GetOauthProviderList(context.Context, *OauthProviderListReq) (*OauthProviderListResp, error)
+	GetOauthProviderById(context.Context, *IDReq) (*OauthProviderInfo, error)
+	DeleteOauthProvider(context.Context, *IDsReq) (*BaseResp, error)
+	OauthLogin(context.Context, *OauthLoginReq) (*OauthRedirectResp, error)
+	OauthCallback(context.Context, *CallbackReq) (*CallbackResp, error)
+	// group: captcha
+	EmailCaptcha(context.Context, *EmailCaptchaReq) (*BaseResp, error)
+	SmsCaptcha(context.Context, *SmsCaptchaReq) (*BaseResp, error)
+	// group: login
+	LoginByEmail(context.Context, *LoginByEmailReq) (*LoginResp, error)
+	LoginBySms(context.Context, *LoginBySmsReq) (*LoginResp, error)
+	// group: register
+	Register(context.Context, *RegisterReq) (*BaseResp, error)
+	RegisterByEmail(context.Context, *RegisterByEmailReq) (*BaseResp, error)
+	RegisterBySms(context.Context, *RegisterBySmsReq) (*BaseResp, error)
+	// group: password
+	ResetPasswordByEmail(context.Context, *ResetPasswordByEmailReq) (*BaseResp, error)
+	ResetPasswordBySms(context.Context, *ResetPasswordBySmsReq) (*BaseResp, error)
+	ChangePassword(context.Context, *ChangePasswordReq) (*BaseResp, error)
+	// group: token
+	RefreshToken(context.Context, *RefreshTokenReq) (*RefreshTokenResp, error)
+	AccessToken(context.Context, *AccessTokenReq) (*RefreshTokenResp, error)
+	// group: user
+	UpdateProfile(context.Context, *ProfileInfo) (*BaseResp, error)
 	mustEmbedUnimplementedCoreServer()
 }
 
@@ -60,6 +1092,255 @@ type UnimplementedCoreServer struct {
 
 func (UnimplementedCoreServer) Ping(context.Context, *PingReq) (*PingResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Ping not implemented")
+}
+func (UnimplementedCoreServer) GetCaptcha(context.Context, *CaptchaReq) (*CaptchaResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetCaptcha not implemented")
+}
+func (UnimplementedCoreServer) Login(context.Context, *LoginReq) (*LoginResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method Login not implemented")
+}
+func (UnimplementedCoreServer) InitDatabase(context.Context, *Empty) (*BaseResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method InitDatabase not implemented")
+}
+func (UnimplementedCoreServer) CreateUser(context.Context, *UserInfo) (*BaseUUIDResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CreateUser not implemented")
+}
+func (UnimplementedCoreServer) UpdateUser(context.Context, *UserInfo) (*BaseResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method UpdateUser not implemented")
+}
+func (UnimplementedCoreServer) GetUserList(context.Context, *UserListReq) (*UserListResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetUserList not implemented")
+}
+func (UnimplementedCoreServer) GetUserById(context.Context, *UUIDReq) (*UserInfo, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetUserById not implemented")
+}
+func (UnimplementedCoreServer) DeleteUser(context.Context, *UUIDsReq) (*BaseResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method DeleteUser not implemented")
+}
+func (UnimplementedCoreServer) GetUserInfo(context.Context, *UUIDReq) (*UserBaseIDInfo, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetUserInfo not implemented")
+}
+func (UnimplementedCoreServer) GetUserProfile(context.Context, *UUIDReq) (*ProfileInfo, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetUserProfile not implemented")
+}
+func (UnimplementedCoreServer) GetPermCode(context.Context, *UUIDReq) (*PermCodeResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetPermCode not implemented")
+}
+func (UnimplementedCoreServer) CreateRole(context.Context, *RoleInfo) (*BaseIDResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CreateRole not implemented")
+}
+func (UnimplementedCoreServer) UpdateRole(context.Context, *RoleInfo) (*BaseResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method UpdateRole not implemented")
+}
+func (UnimplementedCoreServer) GetRoleList(context.Context, *RoleListReq) (*RoleListResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetRoleList not implemented")
+}
+func (UnimplementedCoreServer) GetRoleById(context.Context, *IDReq) (*RoleInfo, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetRoleById not implemented")
+}
+func (UnimplementedCoreServer) DeleteRole(context.Context, *IDsReq) (*BaseResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method DeleteRole not implemented")
+}
+func (UnimplementedCoreServer) CreateMenu(context.Context, *MenuInfo) (*BaseIDResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CreateMenu not implemented")
+}
+func (UnimplementedCoreServer) UpdateMenu(context.Context, *MenuInfo) (*BaseResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method UpdateMenu not implemented")
+}
+func (UnimplementedCoreServer) DeleteMenu(context.Context, *IDReq) (*BaseResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method DeleteMenu not implemented")
+}
+func (UnimplementedCoreServer) GetMenuListByRole(context.Context, *UUIDReq) (*MenuInfoList, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetMenuListByRole not implemented")
+}
+func (UnimplementedCoreServer) GetMenuList(context.Context, *PageInfoReq) (*MenuInfoList, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetMenuList not implemented")
+}
+func (UnimplementedCoreServer) GetMenuAuthority(context.Context, *IDReq) (*RoleMenuAuthorityResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetMenuAuthority not implemented")
+}
+func (UnimplementedCoreServer) CreateOrUpdateMenuAuthority(context.Context, *RoleMenuAuthorityReq) (*BaseResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CreateOrUpdateMenuAuthority not implemented")
+}
+func (UnimplementedCoreServer) CreateOrUpdateApiAuthority(context.Context, *CreateOrUpdateApiAuthorityReq) (*BaseResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CreateOrUpdateApiAuthority not implemented")
+}
+func (UnimplementedCoreServer) GetApiAuthority(context.Context, *IDReq) (*ApiAuthorityListResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetApiAuthority not implemented")
+}
+func (UnimplementedCoreServer) CreateApi(context.Context, *ApiInfo) (*BaseIDResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CreateApi not implemented")
+}
+func (UnimplementedCoreServer) UpdateApi(context.Context, *ApiInfo) (*BaseResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method UpdateApi not implemented")
+}
+func (UnimplementedCoreServer) GetApiList(context.Context, *ApiListReq) (*ApiListResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetApiList not implemented")
+}
+func (UnimplementedCoreServer) GetApiById(context.Context, *IDReq) (*ApiInfo, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetApiById not implemented")
+}
+func (UnimplementedCoreServer) DeleteApi(context.Context, *IDsReq) (*BaseResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method DeleteApi not implemented")
+}
+func (UnimplementedCoreServer) CreateDictionary(context.Context, *DictionaryInfo) (*BaseIDResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CreateDictionary not implemented")
+}
+func (UnimplementedCoreServer) UpdateDictionary(context.Context, *DictionaryInfo) (*BaseResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method UpdateDictionary not implemented")
+}
+func (UnimplementedCoreServer) GetDictionaryList(context.Context, *DictionaryListReq) (*DictionaryListResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetDictionaryList not implemented")
+}
+func (UnimplementedCoreServer) GetDictionaryById(context.Context, *IDReq) (*DictionaryInfo, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetDictionaryById not implemented")
+}
+func (UnimplementedCoreServer) DeleteDictionary(context.Context, *IDsReq) (*BaseResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method DeleteDictionary not implemented")
+}
+func (UnimplementedCoreServer) CreateDictionaryDetail(context.Context, *DictionaryDetailInfo) (*BaseIDResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CreateDictionaryDetail not implemented")
+}
+func (UnimplementedCoreServer) UpdateDictionaryDetail(context.Context, *DictionaryDetailInfo) (*BaseResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method UpdateDictionaryDetail not implemented")
+}
+func (UnimplementedCoreServer) GetDictionaryDetailList(context.Context, *DictionaryDetailListReq) (*DictionaryDetailListResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetDictionaryDetailList not implemented")
+}
+func (UnimplementedCoreServer) GetDictionaryDetailById(context.Context, *IDReq) (*DictionaryDetailInfo, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetDictionaryDetailById not implemented")
+}
+func (UnimplementedCoreServer) DeleteDictionaryDetail(context.Context, *IDsReq) (*BaseResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method DeleteDictionaryDetail not implemented")
+}
+func (UnimplementedCoreServer) GetDictionaryDetailByDictionaryName(context.Context, *BaseMsg) (*DictionaryDetailListResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetDictionaryDetailByDictionaryName not implemented")
+}
+func (UnimplementedCoreServer) CreateDepartment(context.Context, *DepartmentInfo) (*BaseIDResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CreateDepartment not implemented")
+}
+func (UnimplementedCoreServer) UpdateDepartment(context.Context, *DepartmentInfo) (*BaseResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method UpdateDepartment not implemented")
+}
+func (UnimplementedCoreServer) GetDepartmentList(context.Context, *DepartmentListReq) (*DepartmentListResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetDepartmentList not implemented")
+}
+func (UnimplementedCoreServer) GetDepartmentById(context.Context, *IDReq) (*DepartmentInfo, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetDepartmentById not implemented")
+}
+func (UnimplementedCoreServer) DeleteDepartment(context.Context, *IDsReq) (*BaseResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method DeleteDepartment not implemented")
+}
+func (UnimplementedCoreServer) CreatePosition(context.Context, *PositionInfo) (*BaseIDResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CreatePosition not implemented")
+}
+func (UnimplementedCoreServer) UpdatePosition(context.Context, *PositionInfo) (*BaseResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method UpdatePosition not implemented")
+}
+func (UnimplementedCoreServer) GetPositionList(context.Context, *PositionListReq) (*PositionListResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetPositionList not implemented")
+}
+func (UnimplementedCoreServer) GetPositionById(context.Context, *IDReq) (*PositionInfo, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetPositionById not implemented")
+}
+func (UnimplementedCoreServer) DeletePosition(context.Context, *IDsReq) (*BaseResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method DeletePosition not implemented")
+}
+func (UnimplementedCoreServer) CreateToken(context.Context, *TokenInfo) (*BaseUUIDResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CreateToken not implemented")
+}
+func (UnimplementedCoreServer) DeleteToken(context.Context, *UUIDsReq) (*BaseResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method DeleteToken not implemented")
+}
+func (UnimplementedCoreServer) GetTokenList(context.Context, *TokenListReq) (*TokenListResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetTokenList not implemented")
+}
+func (UnimplementedCoreServer) GetTokenById(context.Context, *UUIDReq) (*TokenInfo, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetTokenById not implemented")
+}
+func (UnimplementedCoreServer) BlockUserAllToken(context.Context, *UUIDReq) (*BaseResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method BlockUserAllToken not implemented")
+}
+func (UnimplementedCoreServer) UpdateToken(context.Context, *TokenInfo) (*BaseResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method UpdateToken not implemented")
+}
+func (UnimplementedCoreServer) CreateConfiguration(context.Context, *ConfigurationInfo) (*BaseIDResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CreateConfiguration not implemented")
+}
+func (UnimplementedCoreServer) UpdateConfiguration(context.Context, *ConfigurationInfo) (*BaseResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method UpdateConfiguration not implemented")
+}
+func (UnimplementedCoreServer) GetConfigurationList(context.Context, *ConfigurationListReq) (*ConfigurationListResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetConfigurationList not implemented")
+}
+func (UnimplementedCoreServer) GetConfigurationById(context.Context, *IDReq) (*ConfigurationInfo, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetConfigurationById not implemented")
+}
+func (UnimplementedCoreServer) DeleteConfiguration(context.Context, *IDsReq) (*BaseResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method DeleteConfiguration not implemented")
+}
+func (UnimplementedCoreServer) GetSystemConfigurationList(context.Context, *Empty) (*ConfigurationListResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetSystemConfigurationList not implemented")
+}
+func (UnimplementedCoreServer) CreateOauthProvider(context.Context, *OauthProviderInfo) (*BaseIDResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CreateOauthProvider not implemented")
+}
+func (UnimplementedCoreServer) UpdateOauthProvider(context.Context, *OauthProviderInfo) (*BaseResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method UpdateOauthProvider not implemented")
+}
+func (UnimplementedCoreServer) GetOauthProviderList(context.Context, *OauthProviderListReq) (*OauthProviderListResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetOauthProviderList not implemented")
+}
+func (UnimplementedCoreServer) GetOauthProviderById(context.Context, *IDReq) (*OauthProviderInfo, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetOauthProviderById not implemented")
+}
+func (UnimplementedCoreServer) DeleteOauthProvider(context.Context, *IDsReq) (*BaseResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method DeleteOauthProvider not implemented")
+}
+func (UnimplementedCoreServer) OauthLogin(context.Context, *OauthLoginReq) (*OauthRedirectResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method OauthLogin not implemented")
+}
+func (UnimplementedCoreServer) OauthCallback(context.Context, *CallbackReq) (*CallbackResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method OauthCallback not implemented")
+}
+func (UnimplementedCoreServer) EmailCaptcha(context.Context, *EmailCaptchaReq) (*BaseResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method EmailCaptcha not implemented")
+}
+func (UnimplementedCoreServer) SmsCaptcha(context.Context, *SmsCaptchaReq) (*BaseResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method SmsCaptcha not implemented")
+}
+func (UnimplementedCoreServer) LoginByEmail(context.Context, *LoginByEmailReq) (*LoginResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method LoginByEmail not implemented")
+}
+func (UnimplementedCoreServer) LoginBySms(context.Context, *LoginBySmsReq) (*LoginResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method LoginBySms not implemented")
+}
+func (UnimplementedCoreServer) Register(context.Context, *RegisterReq) (*BaseResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method Register not implemented")
+}
+func (UnimplementedCoreServer) RegisterByEmail(context.Context, *RegisterByEmailReq) (*BaseResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method RegisterByEmail not implemented")
+}
+func (UnimplementedCoreServer) RegisterBySms(context.Context, *RegisterBySmsReq) (*BaseResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method RegisterBySms not implemented")
+}
+func (UnimplementedCoreServer) ResetPasswordByEmail(context.Context, *ResetPasswordByEmailReq) (*BaseResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method ResetPasswordByEmail not implemented")
+}
+func (UnimplementedCoreServer) ResetPasswordBySms(context.Context, *ResetPasswordBySmsReq) (*BaseResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method ResetPasswordBySms not implemented")
+}
+func (UnimplementedCoreServer) ChangePassword(context.Context, *ChangePasswordReq) (*BaseResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method ChangePassword not implemented")
+}
+func (UnimplementedCoreServer) RefreshToken(context.Context, *RefreshTokenReq) (*RefreshTokenResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method RefreshToken not implemented")
+}
+func (UnimplementedCoreServer) AccessToken(context.Context, *AccessTokenReq) (*RefreshTokenResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method AccessToken not implemented")
+}
+func (UnimplementedCoreServer) UpdateProfile(context.Context, *ProfileInfo) (*BaseResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method UpdateProfile not implemented")
 }
 func (UnimplementedCoreServer) mustEmbedUnimplementedCoreServer() {}
 
@@ -92,6 +1373,1500 @@ func _Core_Ping_Handler(srv interface{}, ctx context.Context, dec func(interface
 	return interceptor(ctx, in, info, handler)
 }
 
+func _Core_GetCaptcha_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(CaptchaReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).GetCaptcha(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_GetCaptcha_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).GetCaptcha(ctx, req.(*CaptchaReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_Login_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(LoginReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).Login(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_Login_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).Login(ctx, req.(*LoginReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_InitDatabase_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(Empty)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).InitDatabase(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_InitDatabase_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).InitDatabase(ctx, req.(*Empty))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_CreateUser_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(UserInfo)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).CreateUser(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_CreateUser_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).CreateUser(ctx, req.(*UserInfo))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_UpdateUser_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(UserInfo)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).UpdateUser(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_UpdateUser_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).UpdateUser(ctx, req.(*UserInfo))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_GetUserList_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(UserListReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).GetUserList(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_GetUserList_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).GetUserList(ctx, req.(*UserListReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_GetUserById_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(UUIDReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).GetUserById(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_GetUserById_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).GetUserById(ctx, req.(*UUIDReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_DeleteUser_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(UUIDsReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).DeleteUser(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_DeleteUser_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).DeleteUser(ctx, req.(*UUIDsReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_GetUserInfo_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(UUIDReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).GetUserInfo(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_GetUserInfo_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).GetUserInfo(ctx, req.(*UUIDReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_GetUserProfile_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(UUIDReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).GetUserProfile(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_GetUserProfile_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).GetUserProfile(ctx, req.(*UUIDReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_GetPermCode_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(UUIDReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).GetPermCode(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_GetPermCode_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).GetPermCode(ctx, req.(*UUIDReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_CreateRole_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(RoleInfo)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).CreateRole(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_CreateRole_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).CreateRole(ctx, req.(*RoleInfo))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_UpdateRole_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(RoleInfo)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).UpdateRole(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_UpdateRole_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).UpdateRole(ctx, req.(*RoleInfo))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_GetRoleList_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(RoleListReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).GetRoleList(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_GetRoleList_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).GetRoleList(ctx, req.(*RoleListReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_GetRoleById_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(IDReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).GetRoleById(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_GetRoleById_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).GetRoleById(ctx, req.(*IDReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_DeleteRole_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(IDsReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).DeleteRole(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_DeleteRole_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).DeleteRole(ctx, req.(*IDsReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_CreateMenu_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(MenuInfo)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).CreateMenu(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_CreateMenu_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).CreateMenu(ctx, req.(*MenuInfo))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_UpdateMenu_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(MenuInfo)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).UpdateMenu(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_UpdateMenu_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).UpdateMenu(ctx, req.(*MenuInfo))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_DeleteMenu_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(IDReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).DeleteMenu(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_DeleteMenu_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).DeleteMenu(ctx, req.(*IDReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_GetMenuListByRole_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(UUIDReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).GetMenuListByRole(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_GetMenuListByRole_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).GetMenuListByRole(ctx, req.(*UUIDReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_GetMenuList_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(PageInfoReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).GetMenuList(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_GetMenuList_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).GetMenuList(ctx, req.(*PageInfoReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_GetMenuAuthority_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(IDReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).GetMenuAuthority(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_GetMenuAuthority_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).GetMenuAuthority(ctx, req.(*IDReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_CreateOrUpdateMenuAuthority_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(RoleMenuAuthorityReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).CreateOrUpdateMenuAuthority(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_CreateOrUpdateMenuAuthority_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).CreateOrUpdateMenuAuthority(ctx, req.(*RoleMenuAuthorityReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_CreateOrUpdateApiAuthority_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(CreateOrUpdateApiAuthorityReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).CreateOrUpdateApiAuthority(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_CreateOrUpdateApiAuthority_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).CreateOrUpdateApiAuthority(ctx, req.(*CreateOrUpdateApiAuthorityReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_GetApiAuthority_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(IDReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).GetApiAuthority(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_GetApiAuthority_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).GetApiAuthority(ctx, req.(*IDReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_CreateApi_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ApiInfo)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).CreateApi(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_CreateApi_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).CreateApi(ctx, req.(*ApiInfo))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_UpdateApi_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ApiInfo)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).UpdateApi(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_UpdateApi_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).UpdateApi(ctx, req.(*ApiInfo))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_GetApiList_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ApiListReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).GetApiList(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_GetApiList_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).GetApiList(ctx, req.(*ApiListReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_GetApiById_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(IDReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).GetApiById(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_GetApiById_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).GetApiById(ctx, req.(*IDReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_DeleteApi_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(IDsReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).DeleteApi(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_DeleteApi_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).DeleteApi(ctx, req.(*IDsReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_CreateDictionary_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(DictionaryInfo)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).CreateDictionary(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_CreateDictionary_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).CreateDictionary(ctx, req.(*DictionaryInfo))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_UpdateDictionary_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(DictionaryInfo)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).UpdateDictionary(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_UpdateDictionary_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).UpdateDictionary(ctx, req.(*DictionaryInfo))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_GetDictionaryList_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(DictionaryListReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).GetDictionaryList(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_GetDictionaryList_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).GetDictionaryList(ctx, req.(*DictionaryListReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_GetDictionaryById_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(IDReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).GetDictionaryById(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_GetDictionaryById_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).GetDictionaryById(ctx, req.(*IDReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_DeleteDictionary_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(IDsReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).DeleteDictionary(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_DeleteDictionary_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).DeleteDictionary(ctx, req.(*IDsReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_CreateDictionaryDetail_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(DictionaryDetailInfo)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).CreateDictionaryDetail(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_CreateDictionaryDetail_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).CreateDictionaryDetail(ctx, req.(*DictionaryDetailInfo))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_UpdateDictionaryDetail_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(DictionaryDetailInfo)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).UpdateDictionaryDetail(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_UpdateDictionaryDetail_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).UpdateDictionaryDetail(ctx, req.(*DictionaryDetailInfo))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_GetDictionaryDetailList_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(DictionaryDetailListReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).GetDictionaryDetailList(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_GetDictionaryDetailList_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).GetDictionaryDetailList(ctx, req.(*DictionaryDetailListReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_GetDictionaryDetailById_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(IDReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).GetDictionaryDetailById(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_GetDictionaryDetailById_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).GetDictionaryDetailById(ctx, req.(*IDReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_DeleteDictionaryDetail_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(IDsReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).DeleteDictionaryDetail(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_DeleteDictionaryDetail_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).DeleteDictionaryDetail(ctx, req.(*IDsReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_GetDictionaryDetailByDictionaryName_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(BaseMsg)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).GetDictionaryDetailByDictionaryName(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_GetDictionaryDetailByDictionaryName_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).GetDictionaryDetailByDictionaryName(ctx, req.(*BaseMsg))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_CreateDepartment_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(DepartmentInfo)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).CreateDepartment(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_CreateDepartment_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).CreateDepartment(ctx, req.(*DepartmentInfo))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_UpdateDepartment_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(DepartmentInfo)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).UpdateDepartment(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_UpdateDepartment_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).UpdateDepartment(ctx, req.(*DepartmentInfo))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_GetDepartmentList_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(DepartmentListReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).GetDepartmentList(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_GetDepartmentList_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).GetDepartmentList(ctx, req.(*DepartmentListReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_GetDepartmentById_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(IDReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).GetDepartmentById(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_GetDepartmentById_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).GetDepartmentById(ctx, req.(*IDReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_DeleteDepartment_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(IDsReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).DeleteDepartment(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_DeleteDepartment_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).DeleteDepartment(ctx, req.(*IDsReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_CreatePosition_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(PositionInfo)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).CreatePosition(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_CreatePosition_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).CreatePosition(ctx, req.(*PositionInfo))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_UpdatePosition_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(PositionInfo)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).UpdatePosition(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_UpdatePosition_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).UpdatePosition(ctx, req.(*PositionInfo))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_GetPositionList_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(PositionListReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).GetPositionList(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_GetPositionList_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).GetPositionList(ctx, req.(*PositionListReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_GetPositionById_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(IDReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).GetPositionById(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_GetPositionById_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).GetPositionById(ctx, req.(*IDReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_DeletePosition_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(IDsReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).DeletePosition(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_DeletePosition_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).DeletePosition(ctx, req.(*IDsReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_CreateToken_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(TokenInfo)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).CreateToken(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_CreateToken_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).CreateToken(ctx, req.(*TokenInfo))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_DeleteToken_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(UUIDsReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).DeleteToken(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_DeleteToken_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).DeleteToken(ctx, req.(*UUIDsReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_GetTokenList_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(TokenListReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).GetTokenList(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_GetTokenList_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).GetTokenList(ctx, req.(*TokenListReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_GetTokenById_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(UUIDReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).GetTokenById(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_GetTokenById_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).GetTokenById(ctx, req.(*UUIDReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_BlockUserAllToken_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(UUIDReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).BlockUserAllToken(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_BlockUserAllToken_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).BlockUserAllToken(ctx, req.(*UUIDReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_UpdateToken_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(TokenInfo)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).UpdateToken(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_UpdateToken_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).UpdateToken(ctx, req.(*TokenInfo))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_CreateConfiguration_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ConfigurationInfo)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).CreateConfiguration(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_CreateConfiguration_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).CreateConfiguration(ctx, req.(*ConfigurationInfo))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_UpdateConfiguration_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ConfigurationInfo)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).UpdateConfiguration(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_UpdateConfiguration_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).UpdateConfiguration(ctx, req.(*ConfigurationInfo))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_GetConfigurationList_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ConfigurationListReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).GetConfigurationList(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_GetConfigurationList_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).GetConfigurationList(ctx, req.(*ConfigurationListReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_GetConfigurationById_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(IDReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).GetConfigurationById(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_GetConfigurationById_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).GetConfigurationById(ctx, req.(*IDReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_DeleteConfiguration_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(IDsReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).DeleteConfiguration(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_DeleteConfiguration_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).DeleteConfiguration(ctx, req.(*IDsReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_GetSystemConfigurationList_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(Empty)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).GetSystemConfigurationList(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_GetSystemConfigurationList_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).GetSystemConfigurationList(ctx, req.(*Empty))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_CreateOauthProvider_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(OauthProviderInfo)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).CreateOauthProvider(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_CreateOauthProvider_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).CreateOauthProvider(ctx, req.(*OauthProviderInfo))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_UpdateOauthProvider_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(OauthProviderInfo)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).UpdateOauthProvider(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_UpdateOauthProvider_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).UpdateOauthProvider(ctx, req.(*OauthProviderInfo))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_GetOauthProviderList_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(OauthProviderListReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).GetOauthProviderList(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_GetOauthProviderList_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).GetOauthProviderList(ctx, req.(*OauthProviderListReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_GetOauthProviderById_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(IDReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).GetOauthProviderById(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_GetOauthProviderById_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).GetOauthProviderById(ctx, req.(*IDReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_DeleteOauthProvider_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(IDsReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).DeleteOauthProvider(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_DeleteOauthProvider_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).DeleteOauthProvider(ctx, req.(*IDsReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_OauthLogin_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(OauthLoginReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).OauthLogin(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_OauthLogin_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).OauthLogin(ctx, req.(*OauthLoginReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_OauthCallback_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(CallbackReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).OauthCallback(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_OauthCallback_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).OauthCallback(ctx, req.(*CallbackReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_EmailCaptcha_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(EmailCaptchaReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).EmailCaptcha(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_EmailCaptcha_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).EmailCaptcha(ctx, req.(*EmailCaptchaReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_SmsCaptcha_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(SmsCaptchaReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).SmsCaptcha(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_SmsCaptcha_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).SmsCaptcha(ctx, req.(*SmsCaptchaReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_LoginByEmail_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(LoginByEmailReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).LoginByEmail(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_LoginByEmail_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).LoginByEmail(ctx, req.(*LoginByEmailReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_LoginBySms_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(LoginBySmsReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).LoginBySms(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_LoginBySms_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).LoginBySms(ctx, req.(*LoginBySmsReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_Register_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(RegisterReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).Register(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_Register_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).Register(ctx, req.(*RegisterReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_RegisterByEmail_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(RegisterByEmailReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).RegisterByEmail(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_RegisterByEmail_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).RegisterByEmail(ctx, req.(*RegisterByEmailReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_RegisterBySms_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(RegisterBySmsReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).RegisterBySms(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_RegisterBySms_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).RegisterBySms(ctx, req.(*RegisterBySmsReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_ResetPasswordByEmail_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ResetPasswordByEmailReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).ResetPasswordByEmail(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_ResetPasswordByEmail_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).ResetPasswordByEmail(ctx, req.(*ResetPasswordByEmailReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_ResetPasswordBySms_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ResetPasswordBySmsReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).ResetPasswordBySms(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_ResetPasswordBySms_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).ResetPasswordBySms(ctx, req.(*ResetPasswordBySmsReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_ChangePassword_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ChangePasswordReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).ChangePassword(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_ChangePassword_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).ChangePassword(ctx, req.(*ChangePasswordReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_RefreshToken_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(RefreshTokenReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).RefreshToken(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_RefreshToken_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).RefreshToken(ctx, req.(*RefreshTokenReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_AccessToken_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(AccessTokenReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).AccessToken(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_AccessToken_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).AccessToken(ctx, req.(*AccessTokenReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Core_UpdateProfile_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ProfileInfo)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreServer).UpdateProfile(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Core_UpdateProfile_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreServer).UpdateProfile(ctx, req.(*ProfileInfo))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // Core_ServiceDesc is the grpc.ServiceDesc for Core service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -100,8 +2875,340 @@ var Core_ServiceDesc = grpc.ServiceDesc{
 	HandlerType: (*CoreServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
-			MethodName: "Ping",
+			MethodName: "ping",
 			Handler:    _Core_Ping_Handler,
+		},
+		{
+			MethodName: "getCaptcha",
+			Handler:    _Core_GetCaptcha_Handler,
+		},
+		{
+			MethodName: "login",
+			Handler:    _Core_Login_Handler,
+		},
+		{
+			MethodName: "initDatabase",
+			Handler:    _Core_InitDatabase_Handler,
+		},
+		{
+			MethodName: "createUser",
+			Handler:    _Core_CreateUser_Handler,
+		},
+		{
+			MethodName: "updateUser",
+			Handler:    _Core_UpdateUser_Handler,
+		},
+		{
+			MethodName: "getUserList",
+			Handler:    _Core_GetUserList_Handler,
+		},
+		{
+			MethodName: "getUserById",
+			Handler:    _Core_GetUserById_Handler,
+		},
+		{
+			MethodName: "deleteUser",
+			Handler:    _Core_DeleteUser_Handler,
+		},
+		{
+			MethodName: "getUserInfo",
+			Handler:    _Core_GetUserInfo_Handler,
+		},
+		{
+			MethodName: "getUserProfile",
+			Handler:    _Core_GetUserProfile_Handler,
+		},
+		{
+			MethodName: "getPermCode",
+			Handler:    _Core_GetPermCode_Handler,
+		},
+		{
+			MethodName: "createRole",
+			Handler:    _Core_CreateRole_Handler,
+		},
+		{
+			MethodName: "updateRole",
+			Handler:    _Core_UpdateRole_Handler,
+		},
+		{
+			MethodName: "getRoleList",
+			Handler:    _Core_GetRoleList_Handler,
+		},
+		{
+			MethodName: "getRoleById",
+			Handler:    _Core_GetRoleById_Handler,
+		},
+		{
+			MethodName: "deleteRole",
+			Handler:    _Core_DeleteRole_Handler,
+		},
+		{
+			MethodName: "createMenu",
+			Handler:    _Core_CreateMenu_Handler,
+		},
+		{
+			MethodName: "updateMenu",
+			Handler:    _Core_UpdateMenu_Handler,
+		},
+		{
+			MethodName: "deleteMenu",
+			Handler:    _Core_DeleteMenu_Handler,
+		},
+		{
+			MethodName: "getMenuListByRole",
+			Handler:    _Core_GetMenuListByRole_Handler,
+		},
+		{
+			MethodName: "getMenuList",
+			Handler:    _Core_GetMenuList_Handler,
+		},
+		{
+			MethodName: "getMenuAuthority",
+			Handler:    _Core_GetMenuAuthority_Handler,
+		},
+		{
+			MethodName: "createOrUpdateMenuAuthority",
+			Handler:    _Core_CreateOrUpdateMenuAuthority_Handler,
+		},
+		{
+			MethodName: "createOrUpdateApiAuthority",
+			Handler:    _Core_CreateOrUpdateApiAuthority_Handler,
+		},
+		{
+			MethodName: "getApiAuthority",
+			Handler:    _Core_GetApiAuthority_Handler,
+		},
+		{
+			MethodName: "createApi",
+			Handler:    _Core_CreateApi_Handler,
+		},
+		{
+			MethodName: "updateApi",
+			Handler:    _Core_UpdateApi_Handler,
+		},
+		{
+			MethodName: "getApiList",
+			Handler:    _Core_GetApiList_Handler,
+		},
+		{
+			MethodName: "getApiById",
+			Handler:    _Core_GetApiById_Handler,
+		},
+		{
+			MethodName: "deleteApi",
+			Handler:    _Core_DeleteApi_Handler,
+		},
+		{
+			MethodName: "createDictionary",
+			Handler:    _Core_CreateDictionary_Handler,
+		},
+		{
+			MethodName: "updateDictionary",
+			Handler:    _Core_UpdateDictionary_Handler,
+		},
+		{
+			MethodName: "getDictionaryList",
+			Handler:    _Core_GetDictionaryList_Handler,
+		},
+		{
+			MethodName: "getDictionaryById",
+			Handler:    _Core_GetDictionaryById_Handler,
+		},
+		{
+			MethodName: "deleteDictionary",
+			Handler:    _Core_DeleteDictionary_Handler,
+		},
+		{
+			MethodName: "createDictionaryDetail",
+			Handler:    _Core_CreateDictionaryDetail_Handler,
+		},
+		{
+			MethodName: "updateDictionaryDetail",
+			Handler:    _Core_UpdateDictionaryDetail_Handler,
+		},
+		{
+			MethodName: "getDictionaryDetailList",
+			Handler:    _Core_GetDictionaryDetailList_Handler,
+		},
+		{
+			MethodName: "getDictionaryDetailById",
+			Handler:    _Core_GetDictionaryDetailById_Handler,
+		},
+		{
+			MethodName: "deleteDictionaryDetail",
+			Handler:    _Core_DeleteDictionaryDetail_Handler,
+		},
+		{
+			MethodName: "getDictionaryDetailByDictionaryName",
+			Handler:    _Core_GetDictionaryDetailByDictionaryName_Handler,
+		},
+		{
+			MethodName: "createDepartment",
+			Handler:    _Core_CreateDepartment_Handler,
+		},
+		{
+			MethodName: "updateDepartment",
+			Handler:    _Core_UpdateDepartment_Handler,
+		},
+		{
+			MethodName: "getDepartmentList",
+			Handler:    _Core_GetDepartmentList_Handler,
+		},
+		{
+			MethodName: "getDepartmentById",
+			Handler:    _Core_GetDepartmentById_Handler,
+		},
+		{
+			MethodName: "deleteDepartment",
+			Handler:    _Core_DeleteDepartment_Handler,
+		},
+		{
+			MethodName: "createPosition",
+			Handler:    _Core_CreatePosition_Handler,
+		},
+		{
+			MethodName: "updatePosition",
+			Handler:    _Core_UpdatePosition_Handler,
+		},
+		{
+			MethodName: "getPositionList",
+			Handler:    _Core_GetPositionList_Handler,
+		},
+		{
+			MethodName: "getPositionById",
+			Handler:    _Core_GetPositionById_Handler,
+		},
+		{
+			MethodName: "deletePosition",
+			Handler:    _Core_DeletePosition_Handler,
+		},
+		{
+			MethodName: "createToken",
+			Handler:    _Core_CreateToken_Handler,
+		},
+		{
+			MethodName: "deleteToken",
+			Handler:    _Core_DeleteToken_Handler,
+		},
+		{
+			MethodName: "getTokenList",
+			Handler:    _Core_GetTokenList_Handler,
+		},
+		{
+			MethodName: "getTokenById",
+			Handler:    _Core_GetTokenById_Handler,
+		},
+		{
+			MethodName: "blockUserAllToken",
+			Handler:    _Core_BlockUserAllToken_Handler,
+		},
+		{
+			MethodName: "updateToken",
+			Handler:    _Core_UpdateToken_Handler,
+		},
+		{
+			MethodName: "createConfiguration",
+			Handler:    _Core_CreateConfiguration_Handler,
+		},
+		{
+			MethodName: "updateConfiguration",
+			Handler:    _Core_UpdateConfiguration_Handler,
+		},
+		{
+			MethodName: "getConfigurationList",
+			Handler:    _Core_GetConfigurationList_Handler,
+		},
+		{
+			MethodName: "getConfigurationById",
+			Handler:    _Core_GetConfigurationById_Handler,
+		},
+		{
+			MethodName: "deleteConfiguration",
+			Handler:    _Core_DeleteConfiguration_Handler,
+		},
+		{
+			MethodName: "getSystemConfigurationList",
+			Handler:    _Core_GetSystemConfigurationList_Handler,
+		},
+		{
+			MethodName: "createOauthProvider",
+			Handler:    _Core_CreateOauthProvider_Handler,
+		},
+		{
+			MethodName: "updateOauthProvider",
+			Handler:    _Core_UpdateOauthProvider_Handler,
+		},
+		{
+			MethodName: "getOauthProviderList",
+			Handler:    _Core_GetOauthProviderList_Handler,
+		},
+		{
+			MethodName: "getOauthProviderById",
+			Handler:    _Core_GetOauthProviderById_Handler,
+		},
+		{
+			MethodName: "deleteOauthProvider",
+			Handler:    _Core_DeleteOauthProvider_Handler,
+		},
+		{
+			MethodName: "oauthLogin",
+			Handler:    _Core_OauthLogin_Handler,
+		},
+		{
+			MethodName: "oauthCallback",
+			Handler:    _Core_OauthCallback_Handler,
+		},
+		{
+			MethodName: "emailCaptcha",
+			Handler:    _Core_EmailCaptcha_Handler,
+		},
+		{
+			MethodName: "smsCaptcha",
+			Handler:    _Core_SmsCaptcha_Handler,
+		},
+		{
+			MethodName: "loginByEmail",
+			Handler:    _Core_LoginByEmail_Handler,
+		},
+		{
+			MethodName: "loginBySms",
+			Handler:    _Core_LoginBySms_Handler,
+		},
+		{
+			MethodName: "register",
+			Handler:    _Core_Register_Handler,
+		},
+		{
+			MethodName: "registerByEmail",
+			Handler:    _Core_RegisterByEmail_Handler,
+		},
+		{
+			MethodName: "registerBySms",
+			Handler:    _Core_RegisterBySms_Handler,
+		},
+		{
+			MethodName: "resetPasswordByEmail",
+			Handler:    _Core_ResetPasswordByEmail_Handler,
+		},
+		{
+			MethodName: "resetPasswordBySms",
+			Handler:    _Core_ResetPasswordBySms_Handler,
+		},
+		{
+			MethodName: "changePassword",
+			Handler:    _Core_ChangePassword_Handler,
+		},
+		{
+			MethodName: "refreshToken",
+			Handler:    _Core_RefreshToken_Handler,
+		},
+		{
+			MethodName: "accessToken",
+			Handler:    _Core_AccessToken_Handler,
+		},
+		{
+			MethodName: "updateProfile",
+			Handler:    _Core_UpdateProfile_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

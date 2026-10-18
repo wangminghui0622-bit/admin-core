@@ -4,10 +4,10 @@ import (
 	"flag"
 	"fmt"
 
-	"admin-zero/admin-core/core"
-	"admin-zero/admin-core/internal/config"
-	"admin-zero/admin-core/internal/server"
-	"admin-zero/admin-core/internal/svc"
+	"github.com/wangminghui0622-bit/admin-core/core"
+	"github.com/wangminghui0622-bit/admin-core/internal/config"
+	"github.com/wangminghui0622-bit/admin-core/internal/server"
+	"github.com/wangminghui0622-bit/admin-core/internal/svc"
 
 	"github.com/zeromicro/go-zero/core/conf"
 	"github.com/zeromicro/go-zero/core/service"
